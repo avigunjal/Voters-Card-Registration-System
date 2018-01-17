@@ -1,4 +1,4 @@
-# Voters-Card-Registration-System
+# Voters Card Registration System
 
 Graduation project using PHP and Frontend technology for online voting card registration 
 # Technology Used
