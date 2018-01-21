@@ -1,0 +1,73 @@
+<html>
+<head><title>Change Password</title>
+    <style>
+    body{background:#CCCCFF;}
+    h1{margin:60px;font-family:BatmanForeverAlternate;text-align:center;background:#339999;padding:20px;border-bottom-left-radius:20px;
+    border-bottom-right-radius:20px;}
+    div{background:#3366FF;margin:10px 300px;border-radius:10px;box-shadow:10px 10px 15px black;}
+    td{color:black;font-weight:400;padding:10px;font-family:a song for jennifer;font-size:18px;}
+    input[type="text"],[type="password"]{border: 1px solid blue;display:block;color:green;border-radius:10px;padding:4px;font-size:16px;box-shadow:5px 5px 10px green;}
+   input[type="submit"]
+    {
+    background:black; display:inline-block; padding: 10px 60px; color: #fbf7f7;
+    text-decoration: none; font-weight: bold; line-height: 1;text-transform:capitalize;
+    -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 10px; -moz-box-shadow: 0 1px 3px #999;
+    -webkit-box-shadow: 0 1px 3px #999; box-shadow: 0 10px 30px green; text-shadow: 0 -1px 1px #222;
+    border: none; position: relative; cursor: pointer; font-size: 18px; font-family:Verdana, Geneva, sans-serif;
+    }
+    input[type="reset"]
+    {
+    background:green; display:inline-block; padding: 7px 50px; color: #fbf7f7;
+    text-decoration: none; font-weight: bold; line-height: 1;text-transform:capitalize;
+    -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 10px; -moz-box-shadow: 0 1px 3px #999;
+    -webkit-box-shadow: 0 1px 3px #999; box-shadow: 0 1px 3px #999; text-shadow: 0 -1px 1px #222;
+    border: none; position: relative; cursor: pointer; font-size: 18px; font-family:Verdana, Geneva, sans-serif;
+    }
+   a:link{text-decoration:none;color:red;display:block;background:white;border-radius:10px;font-family:serif;padding:10px;}
+   a:hover{background:-moz-linear-gradient(red,blue);color:white;}
+    </style>
+</head>
+<body>
+  
+<center>
+    
+<h1>Change Password</h1>
+
+<div>
+<form action="http://localhost/voters/changepwd.php" method=post>
+<table cellspacing=15>
+    <tr>
+<td>Enter Your Login_id :</td>
+<td align=center><input type=text name="login_id" required=></td>
+</tr>
+<tr>
+<td>Enter Your Current Password :</td>
+<td align=center><input type=text name="oldpwd" required=></td>
+</tr>
+
+
+<tr>
+<td>Enter Your New Password :</td>
+<td align=center><input type=password name="newpwd" required=></td>
+</tr>
+
+<tr>
+<td>Confirm Your New Password :</td>
+<td align=center><input type=password name=cnfrmpwd required=></td>
+</tr>
+
+<tr>
+<td align=center><input type=submit value="Change Password"></td>
+<td align=center><input type=reset value="Reset"></td>
+</tr>
+</table>
+
+</form>
+</div>
+<div>
+    <a href="user_login.html" target=""><strong>Back to Login</a>
+</div>
+
+    
+</body>
+</html>

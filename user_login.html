@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>User Login</title>
+   <link rel="stylesheet" type="text/css" href="usignin.css"/>
+</head>
+
+<body>
+    <h2>User&nbsp&nbsp; Login</h2>
+    <div class="signup">
+    
+    <a href="user_signup.html"><center><img style="border-radius:15px;" src="photos/login/signup.png" alt="signup"/></center></a>
+    </div>
+
+
+    <form method="post" action="http://localhost/voters/php/user_con.php">
+    <div id="dotted">
+    <img src="photos/login/emp.png" alt="loginicon" width=240px height=155px
+         class="loginicon"/>
+   <div id="block_user"><p>
+<img src="photos/login/user.GIF" alt="user" width=20px height=20px >
+<input type="text" name="username"   placeholder="Login ID"  size="25px" required=""/></p>
+
+<p>
+<img src="photos/login/lock.GIF" alt="pwd" width=20px height=20px id="pwd">
+<input type="password" name="pwd" placeholder="Your Password" size="25px" required=""/></p></div>
+    <input type="image" src="http://localhost/voters/photos/login.png"/></div></from>
+	<div id=login_option>
+   
+   <p><a href="changepwd.html" style="margin-left:320px;border-radius:10px;display:block;background:#404040 ;font-family:Corleone;color:white;padding:3px;text-align:center;">
+  <img src="http://localhost/voters/photos/unlock.png" width="30" height="20">&nbsp;Change password ? </a></p>
+   </div>
+</form>
+<div class="welcome">
+
+<a href="Homepage.html"><center><img style="border-radius:15px;" src="photos/login/homeback.png" alt="home" /></center></a></div> 
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+
+body {
+margin:10px 300px;margin-right:200px;
+background:url("photos/login/webbackground.jpeg");
+background-repeat:no-repeat;
+opacity: 0.8;
+filter: alpha(opacity=10);
+padding:30px;
+
+}
+h2{text-align:center;margin-right:160px;text-decoration:underline;font-size: 40px;color:white;font-family:"Weltron 2001";text-transform: uppercase;}
+
+
+#dotted{border:0.5px dotted white;padding:10px;margin:1px;}
+
+
+.loginicon{margin-left:1px;float:left;}
+
+form{text-align:right;background-color:#334411 ;padding:20px;margin-right:150px;border:2px groove green;
+border-radius: 10px;box-shadow: 0px 0px 15px red ; }
+
+#block_user{
+display:block;
+float:right;
+border-radius:10px;
+padding:5px;
+background-color:#333344;
+box-shadow: 1px 1px 6px black;
+
+}
+
+/*input:focus{border:1px solid blue; size:50px;box-shadow: 1px 1px 6px blue;}*/
+input{padding: 6px;color:black;font-weight: 500; border-bottom-right-radius:20px; border-top-right-radius:20px; }
+
+.sub{background-color:blue;color:white; padding:10px;border-radius: 6px;} 
+
+input:focus.sub{background-color:green;color:black;font-weight: 600;padding:10px;margin: 2px;}
+a:link{text-decoration: none; font-size: 20px;color:blue;}
+a:hover{color:green;text-decoration:underline;}
+
+input:focus
+{ box-shadow: 1px 1px 10px blue;}
+.homepage{border:0.5px dotted white;padding:5px;background-color:#99CC99;margin-right:150px;
+border-radius: 10px;box-shadow: 10px 1px 10px white;text-align:center; display:block;}

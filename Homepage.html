@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang=en>
+<head>
+<style>
+#grad {
+   
+    background: -o-linear-gradient(right, red, blue); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#ff4500,white,green); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(red,#FF4500,white,green);
+}
+h2{
+text-align: center;font-size:40px; font-family:Droid Sans Mono;padding:0px;margin:3px 10px;
+background-color:#9966CC;word-spacing:0px;color:white;
+font-weight:800;border:2px solid #9966CC;border-width:10px;text-shadow: 10px 10px 15px black;
+border-bottom-right-radius: 50px;border-top-left-radius:50px;box-shadow: 20px 20px 15px rgb(210,100,150);
+}
+div#img{ padding:30px 10px; margin:20px 50px; display: inline-block;
+background-image: url("photos/indexpage/125.jpg"); border-radius: 10px;}
+li{display:inline-block;background-color:#778899;text-align:center;font-size:20px;
+color:red; padding:3px 10px;border-radius:15px;}
+a:link{color:blue;background-color:#000000;text-decoration:none;border-radius:10px;font-weight: 700;
+padding:3px;font-family:Sketch Rockwell;}
+a:hover{color:black;background-color:#3300cc;font-size: 22px;text-decoration: underline;}
+a:active,visited{color:white;}
+div#login{background-color:#383855; padding:10px; margin:0px 20px; border-radius:20px;
+}
+    </style>
+    <title>index Login</title>
+     <script>function startTime()
+{
+    var today=new Date();
+    var h=today.getHours();
+    var m=today.getMinutes();
+    var s=today.getSeconds();
+    var d=new Date();
+
+    m=checkTime(m);
+    s=checkTime(s);
+    document.getElementById('tex').innerHTML=h+":"+m+":"+s;
+    
+    document.getElementById('udate').value=d.toLocaleString();
+    t=setTimeout(function(){startTime()},500);
+}
+function checkTime(i)
+{
+    if (i<10)
+    {
+    i="0"+i;
+    }
+    return i;
+}
+document.getElementById("details").innerHTML=navigator.product;
+</script>
+   
+</head>
+<body id="grad" onload="startTime()">
+    <h2>  ONLINE VOTERS  CARD REGITRATION WEBSITE  <br>
+	<img src="photos/indexpage/flg.GIF" alt="flag" width=60 height=50/></br></h2>
+ <div id="img">
+    <img id="img1" src="photos/indexpage/ipad.jpg" alt="ipad" width="400px" height="250px"/>
+    <img id="img2" src="photos/indexpage/anigif.GIF" alt="succe" width="400px" height="250px"/>
+    <img id="img3" src="photos/indexpage/be voter.jpg" alt="be voter" width="400px" height="250px"/>
+ </div>
+ <div id="login">
+    <ul style="text-align: center; padding:5px;margin:20px 100px;">
+    <li><a href="user_login.html">LOG IN HERE</a></li>
+  
+    <li><a style="color:#ff00ff;" href="empsignin.html">EMPLOYEE LOGIN</a></li>
+  <li><a style="color:#ff0033;" href="admin.html">ADMINISTRATION</a></li>
+ <li id="tex" style="text-decoration:blink;float:right;display:block;color:blue;background:black;font-family:DS-Digital;padding:10px 20px; font-size:30px;font-weight:600;"></li></ul>
+<div id="demo" style="text-align:right;color:white;font-family:BluePlateSpecialSW;text-decoration:underline;font-weight:bold;font-size:20px;">
+</div>
+<script>
+    document.getElementById("demo").innerHTML=navigator.userAgent;
+    </script>
+ </div>
+ 
+
+ <footer style="text-align: center;color:black;padding:4px;
+ margin-bottom:10px;font-weight:600;font-family:Linux Libertine Display">
+    copyrights &copy Sangamner College,Department of Computer Science.
+ </footer>
+</body>
+</html>

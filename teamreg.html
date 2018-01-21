@@ -1,0 +1,638 @@
+			<HTML>
+			<HEAD>
+			<TITLE>Service Team Registration</TITLE>
+			
+			<style>
+			 
+ body{margin:5px 30px; background:-moz-linear-gradient(#663366,red,#66CC00);background:linear-gradient(#663366,#66CC00);}
+        table{box-shadow: 0px 0px 50px rgba(4, 129, 177, 0.5) }
+h3{margin:10px;font-size:40px;color:green;text-align:center;font-family:BluePlateSpecialSW;text-decoration:line-through;text-shadow:0px 0px 25px white;}
+ th{text-align:center;}
+	table{width:500px;margin:20px;}
+    td{color:black;padding:10px;margin:auto;text-align:left;font-weight:200;font-family:Western; }
+    table,th,td{border-bottom:2px inset blue; border-radius:10px;padding:05x;margin-top:5px;margin:10px;background:#006666;}
+    input[type="text"]{padding:5px;margin: 1px; border-radius:8px;border:1px black groove; width:250px;font-weight:600;color:black;}
+    input:focus{box-shadow:0px 0px 20px rgba(4, 129, 177, 0.5);
+        opacity:3.5; font-weight:600; color:black;}
+	input:disabled{color:red;font-family:  monospace;}
+	input:focus{background:lightgray;color:black;}
+#sdate,input{padding:5px;margin: 10px; border-radius:8px;border:1px black groove; width: 400px;font-weight:600;color:red;text-transform:capitalize;text-align:center;font-size:15px;}
+    #sdate,input:focus{box-shadow:0px 0px 20px rgba(4, 129, 177, 0.5);
+        opacity:3.5; font-weight:600; color:red;background:black;}
+	input:disabled{color:red;font-family:  monospace;}
+	input:focus{background:lightgray;color:black;}
+	#mr{border-radius: 20px;padding:12px;margin:10px;}
+    textarea {
+        padding:3px;
+        width:80%;
+        height:100px;
+        color:black;
+        font-size:15px;
+	font-weight:500;color:blue;text-transform:uppercase;font-family: Verdana, Arial, Helvetica, sans-serif;
+    }
+  input[type="submit"]
+    {
+    background: #4b8df9; display:inline-block; padding: 5px 10px 6px; color: #fbf7f7;
+    text-decoration: none; font-weight: bold; line-height: 1;text-align:center;margin:20px 200px 10px;
+    -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -moz-box-shadow: 0 1px 3px #999;
+    -webkit-box-shadow: 0 1px 3px #999; box-shadow: 0 1px 3px #999; text-shadow: 0 -1px 1px #222;
+    border: none; position: relative; cursor: pointer; font-size: 14px; font-family:Verdana, Geneva, sans-serif;text-transform:capitalize;
+    }
+    .form input.sub:hover{ background-color: #2a78f6;}
+	fieldset{border-radius:10px;border-color:green}		 
+			</style>
+
+			<script language="javascript">
+
+function verify()
+{
+
+
+  
+ if(document.form1.paddress.value=="")
+   {
+    	alert("Enter Postal Address");
+	document.form1.paddress.focus();
+	 return false;
+   }
+ else  if(document.form1.zip.value=="")
+   {
+    	alert("Enter Zipcode");
+	document.form1.zip.focus();
+	 return false;
+   }
+ else  if(document.form1.email.value=="")
+   {
+    	alert("Enter Email");
+	document.form1.email.focus();
+	 return false;
+   }
+ else if(document.form1.fname.value=="")
+   {
+        alert("Enter First Name");
+	document.form1.fname.focus();
+	 return false;
+   }
+    
+ else  if(document.form1.lname.value=="")
+   {
+    	alert("Enter Last Name");
+	document.form1.lname.focus();
+	 return false;
+   }
+
+ else  if(document.form1.district.value=="")
+   {
+    	alert("Enter District");
+	document.form1.district.focus();
+	 return false;
+   }
+else  if(document.form1.ms.value=="Select One")
+   {
+    	alert("Select Marrital Status");
+	document.form1.ms.focus();
+	 return false;
+   }
+else  if(document.form1.state.value=="Select One")
+   {
+    	alert("Select State");
+	document.form1.ms.focus();
+	 return false;
+   }
+ 
+ else  if(document.form1.day.value=="Day" || document.form1.month.value=="Month" || document.form1.year.value=="Year")
+   {
+    	alert("Select Valid Birth_Date");
+	return false;
+   }
+ else  if(document.form1.day1.value=="Day" || document.form1.month1.value=="Month" || document.form1.year1.value=="Year")
+   {
+    	alert("Select Valid Joining_Date");
+	return false;
+   }
+   else
+{
+         form1.action="http://localhost/voters/php/serviceteam.php";
+		 form1.method="POST";
+		 form1.submit();
+	   } 
+ }
+
+			function fname_check()
+			{
+			
+			var alphaExp = /^[a-z A-Z]+$/;
+	if(fname.value.match(alphaExp))
+        {
+		return true;
+	}
+else
+        {
+			alert("Enter Valid First Name");
+			document.form1.fname.value="";
+			document.form1.fname.focus();
+			
+			}
+			}
+
+			function lname_check()
+			{
+			var z=document.form1.lname.value;
+			
+			
+			var alphaExp = /^[a-z A-Z]+$/;
+	if(lname.value.match(alphaExp))
+        {
+		return true;
+	}
+else
+        {
+			alert("Enter Valid Last Name");
+			document.form1.lname.value="";
+			document.form1.lname.focus();
+			
+			}
+			}
+
+
+
+
+					
+			
+		function city_check()
+			{
+			var z=document.form1.city.value;
+			
+			var alphaExp = /^[a-z A-Z]+$/;
+	if(city.value.match(alphaExp))
+        {
+		return true;
+	}
+else
+        {
+		alert("Enter Valid City");
+		document.form1.city.focus();
+		document.form1.city.value="";
+		return false;
+	}
+
+			}
+
+
+
+			
+
+			function mobile()
+			{
+
+			var z=document.form1.mobno.value;
+
+			if(z.length!=10)
+			{
+			alert("Enter Valid Mobile Number\n [ Exactly 10 Digits ]");
+						document.form1.mobno.value="";
+						document.form1.mobno.focus();
+
+			}
+
+			for (i=0; i<z.length; i++)
+			 {
+			if (z.charAt(i) < "0" || z.charAt(i) > "9") 
+			{
+			alert("Mobile Number must only contain numbers");
+			document.form1.mobno.value="";
+			document.form1.mobno.focus();
+			}
+			}
+			
+
+			}
+			
+			
+			function district_check()
+			{
+
+			var z=document.form1.district.value;
+			var alphaExp = /^[a-z A-Z]+$/;
+	if(district.value.match(alphaExp))
+        {
+		return true;
+	}
+else
+        {
+		alert("Enter Valid District");
+		document.form1.district.value="";
+		document.form1.district.focus();
+		return false;
+	}
+
+			}
+			
+
+			function zip_check()
+					{
+					var p1=document.form1.zip.value;
+
+					if(p1.length!=6)
+					{
+					alert("Enter Valid Zipcode\n[ Exact 6 Digits ]");
+								document.form1.zip.value="";
+								document.form1.zip.focus();
+					}
+	
+					
+					for (i=0; i<p1.length; i++)
+					 {
+					if (p1.charAt(i) < "0" || p1.charAt(i) > "9") 
+					{
+					alert("ZipCode must only contain numbers");
+					document.form1.zip.value="";
+					document.form1.zip.focus();
+					}
+					}
+
+					}
+
+					function email_check()
+					{
+					var e=document.form1.email.value;
+					
+	
+						if(e.indexOf("/") >-1)
+							{
+								alert("Email Address has Invalid Character(/)");
+								document.form1.email.value="";
+								document.form1.email.focus();
+							}
+						if(e.indexOf(":") >-1)
+							{
+								alert("Email Address has Invalid Character(:)");
+								document.form1.email.value="";
+								document.form1.email.focus();
+							}
+						if(e.indexOf(",") >-1)
+							{
+								alert("Email Address has Invalid Character(,)");
+								document.form1.email.value="";
+								document.form1.email.focus();
+							}
+						if(e.indexOf(";") >-1)
+							{
+								alert("Email Address has Invalid Character(;)");
+								document.form1.email.value="";
+								document.form1.email.focus();
+							}
+						if(e.indexOf("@") <0)
+							{
+								alert(" Email Address is missing '@'");
+								document.form1.email.value="";
+								document.form1.email.focus();
+							}
+	
+						if(e.indexOf(".") <0)
+							{
+								alert(" Email Address is missing '.'");
+								document.form1.email.value="";
+								document.form1.email.focus();
+							}
+					
+					}
+
+					
+
+			</script>
+			</HEAD>
+			<body id="bodybg">
+			<FORM name="form1" >
+		<h3>Service Team Registration</h3>
+			<fieldset align=center>
+			    <table>
+			<tr>
+				    <td><font color="black">First Name :</font></td>
+				<td><input name="fname" type="text" id="fname" value="" onblur="fname_check()"></td>
+				    <td><font color="black"> Last Name :</font></td>
+				<td><input name="lname" type="text" id="lname" value="" onblur="lname_check()"></td>
+			</tr>
+
+<td>Postal Address</td>
+                            <td bordercolor="#CC6699">
+<textarea name="paddress" cols="45" rows="5" id="paddress" ></textarea>
+                            </td>
+
+</tr>
+<tr> 
+                            <td>Email Address</td>
+                            <td><input name="email" type="text" id="email" size="35" maxlength="40" onblur="email_check()"></td>
+<td><font color="black"> ZipCode :</font></td>
+				<td><input name="zip" type="text" id="zip" value="" onblur="zip_check()"></td>
+                          </tr>
+			<tr> 
+                            <td>Date of Birth :</td>
+                            <td><font size="1" face="Arial"> 
+                              <select name="year" size="1" class="controlfieldvalue" id="year">
+                     <option selected>Year</option>
+				<option value="1960">1960</option>
+                                <option value="1961">1961</option>
+                                <option value="1962">1962</option>
+				<option value="1963">1963</option>
+				<option value="1964">1964</option>
+                                <option value="1965">1965</option>
+                                <option value="1966">1966</option>
+				<option value="1967">1967</option>
+                                <option value="1968">1968</option>
+                                <option value="1969">1969</option>
+				<option value="1970">1970</option>
+                                <option value="1971">1971</option>
+                                <option value="1972">1972</option>
+				<option value="1973">1973</option>
+                                <option value="1974">1974</option>
+                                <option value="1975">1975</option>
+                                <option value="1976">1976</option>
+                                <option value="1977">1977</option>
+                                <option value="1978">1978</option>
+				<option value="1979">1979</option>
+				<option value="1980">1980</option>
+                                <option value="1981">1981</option>
+                                <option value="1982">1982</option>
+				<option value="1983">1983</option>
+				<option value="1984">1984</option>
+                                <option value="1985">1985</option>
+                                <option value="1986">1986</option>
+				<option value="1987">1987</option>
+                                <option value="1988">1988</option>
+                                <option value="1989">1989</option>
+				<option value="1990">1990</option>
+                                <option value="1991">1991</option>
+                                <option value="1992">1992</option>
+				<option value="1993">1993</option>
+                                <option value="1994">1994</option>
+                                <option value="1995">1995</option>
+                                <option value="1996">1996</option>
+                                <option value="1997">1997</option>
+                                <option value="1998">1998</option>
+				<option value="1999">1999</option>
+                                <option value="2000">2000</option>
+                                <option value="2001">2001</option>
+				<option value="2002">2002</option>
+                                <option value="2003">2003</option>
+                                <option value="2004">2004</option>
+				<option value="2005">2005</option>
+                                <option value="2006">2006</option>
+                                <option value="2007">2007</option>
+				<option value="2008">2008</option>
+                                <option value="2009">2009</option>
+                                <option value="2010">2010</option>
+                                <option value="2011">2011</option>
+                                <option value="2012">2012</option>
+                                <option value="2013">2013</option>
+                              </select>
+                              </font><font size="1" face="Arial"> 
+                              <select name="month" size="1" class="controlfieldvalue" id="month">
+                          <option selected>Month</option>
+                                <option value="January">January</option>
+                                <option value="Febrary">Febrary</option>
+                                <option value="March">March</option>
+                                <option value="April">April</option>
+                                <option value="May">May</option>
+                                <option value="June">June</option>
+                                <option value="July">July</option>
+                                <option value="August">August</option>
+                                <option value="September">September</option>
+                                <option value="October">October</option>
+                                <option value="November">November</option>
+                                <option value="December">December</option>
+                              </select>
+                              <select name="day" size="1" class="controlfieldvalue" id="day">
+
+                                <option selected>Day</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                              </select>
+                              </font><font size="1" face="Arial">&nbsp; </font></td>
+
+			             <td>Joining Date :</td>
+                            <td><font size="1" face="Arial"> 
+                              <select name="year1" size="1" class="controlfieldvalue" id="year1">
+       
+                                <option selected>Year</option>
+				<option value="1960">1960</option>
+                                <option value="1961">1961</option>
+                                <option value="1962">1962</option>
+				<option value="1963">1963</option>
+				<option value="1964">1964</option>
+                                <option value="1965">1965</option>
+                                <option value="1966">1966</option>
+				<option value="1967">1967</option>
+                                <option value="1968">1968</option>
+                                <option value="1969">1969</option>
+				<option value="1970">1970</option>
+                                <option value="1971">1971</option>
+                                <option value="1972">1972</option>
+				<option value="1973">1973</option>
+                                <option value="1974">1974</option>
+                                <option value="1975">1975</option>
+                                <option value="1976">1976</option>
+                                <option value="1977">1977</option>
+                                <option value="1978">1978</option>
+				<option value="1979">1979</option>
+				<option value="1980">1980</option>
+                                <option value="1981">1981</option>
+                                <option value="1982">1982</option>
+				<option value="1983">1983</option>
+				<option value="1984">1984</option>
+                                <option value="1985">1985</option>
+                                <option value="1986">1986</option>
+				<option value="1987">1987</option>
+                                <option value="1988">1988</option>
+                                <option value="1989">1989</option>
+				<option value="1990">1990</option>
+                                <option value="1991">1991</option>
+                                <option value="1992">1992</option>
+				<option value="1993">1993</option>
+                                <option value="1994">1994</option>
+                                <option value="1995">1995</option>
+                                <option value="1996">1996</option>
+                                <option value="1997">1997</option>
+                                <option value="1998">1998</option>
+				<option value="1999">1999</option>
+                                <option value="2000">2000</option>
+                                <option value="2001">2001</option>
+				<option value="2002">2002</option>
+                                <option value="2003">2003</option>
+                                <option value="2004">2004</option>
+				<option value="2005">2005</option>
+                                <option value="2006">2006</option>
+                                <option value="2007">2007</option>
+				<option value="2008">2008</option>
+                                <option value="2009">2009</option>
+                                <option value="2010">2010</option>
+                                <option value="2011">2011</option>
+                                <option value="2012">2012</option>
+                                <option value="2013">2013</option>
+                              </select>
+                              </font><font size="1" face="Arial"> 
+                              <select name="month1" size="1" class="controlfieldvalue" id="month1">
+                      
+     
+                                 <option selected>Month</option>
+                                <option value="January">January</option>
+                                <option value="Febrary">Febrary</option>
+                                <option value="March">March</option>
+                                <option value="April">April</option>
+                                <option value="May">May</option>
+                                <option value="June">June</option>
+                                <option value="July">July</option>
+                                <option value="August">August</option>
+                                <option value="September">September</option>
+                                <option value="October">October</option>
+                                <option value="November">November</option>
+                                <option value="December">December</option>
+                              </select>
+                              <select name="day1" size="1" class="controlfieldvalue" id="day1">
+
+                        <option selected>Day</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                              </select>
+                              </font><font size="1" face="Arial">&nbsp; </font></td>	
+                          </tr>
+				<tr> 
+				    <td><font color="black">Gender :</font></td>
+				    <td><INPUT id="gender" name="gender" type="radio"  checked value="Male">Male&nbsp;
+					<INPUT id="gender" name="gender" type="radio" value="Female">Female</td>
+					<td><font color="black">Marital Status</font> :</td>
+					<td><SELECT id=ms name="ms" onblur="ms_check()">
+				      <OPTION selected value="Select One">Select One</OPTION>
+					      <OPTION value="Unmarried">UnMarried</OPTION>
+						<OPTION value="Married">Married</OPTION>
+					      <OPTION value="Divorcee">Divorcee</OPTION>
+					    </SELECT>&nbsp;</td>
+
+
+				</tr>
+
+				<tr> 
+				    
+				    <td><font color="black">State :</font></td>
+				    <td><SELECT id=state name="state" >
+			<OPTION selected value="Select One">Select One</OPTION>
+							<OPTION value="Andman &amp; Nicobar Islands">Andman &amp; Nicobar Islands</OPTION>
+							<OPTION value="Andhra Pradesh">Andhra Pradesh</OPTION>
+							<OPTION value="Assam">Assam</OPTION>
+							<OPTION value="Bihar">Bihar</OPTION>
+							<OPTION value="Chandigarh">Chandigarh</OPTION>
+							<OPTION value="Chattisgarh">Chattisgarh</OPTION>
+							<OPTION value="Delhi">Delhi</OPTION>
+							<OPTION value="Daman &amp; Diu">Daman &amp; Diu</OPTION>
+							<OPTION value="Goa">Goa</OPTION>
+							<OPTION value="Gujarat">Gujarat</OPTION>
+							<OPTION value="Haryana">Haryana</OPTION>
+							<OPTION value="Himachal Pradesh">Himachal Pradesh</OPTION>
+							<OPTION value="Jammu &amp; Kashmir">Jammu &amp; Kashmir</OPTION>
+							<OPTION value="Jharkhand">Jharkhand</OPTION>
+							<OPTION value="Karnataka">Karnataka</OPTION>
+							<OPTION value="kerela">kerela</OPTION>
+							<OPTION value="Lakshadweep">Lakshadweep</OPTION>
+							<OPTION value="Madhya Pradesh">Madhya Pradesh</OPTION>
+							<OPTION value="Maharashtra">Maharashtra</OPTION>
+							<OPTION value="Meghalay">Meghalay</OPTION>
+							<OPTION value="Mizoram">Mizoram</OPTION>
+							<OPTION value="Nagaland">Nagaland</OPTION>
+							<OPTION value="Orrisa">Orrisa</OPTION>
+							<OPTION value="Punjab">Punjab</OPTION>
+							<OPTION value="Rajasthan">Rajasthan</OPTION>
+							<OPTION value="Tamil Nadu">Tamil Nadu</OPTION>
+							<OPTION value="Tripura">Tripura</OPTION>
+							<OPTION value="Uttar Pradesh">Uttar Pradesh</OPTION>
+							<OPTION value="Uttranchal">Uttranchal</OPTION>
+							<OPTION value="West Bengal">West Bengal</OPTION>
+						</SELECT>&nbsp;</td>
+			<td><font color="black">Mobile No :</font></td>
+				    <td><input type="text" name="mobno" id="mobno" onblur="mobile()" ></td>
+				</tr>
+				<tr> 
+				    <td><font color="black">City :</font></td>
+				    <td><INPUT id="city" name="city" type="text" value="" onblur="city_check()">&nbsp;</td>
+<td><font color="black">District :</font></td>
+				    <td><INPUT id="district" name="district" type="text" value="" onblur="district_check()">&nbsp;</td>
+					</tr>
+		
+			  
+				
+				
+
+			<tr><td colspan=2 align=right>
+				      <input type="submit" name="submit" value="Register"  onClick="verify()"></td>
+			<td colspan=2><input type="reset" style="background:#ff88cc;
+        border: none;
+        text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
+        text-transform:capitalize;
+        color:#eee;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight:600;" name="reset" value="reset"></td>
+			</tr>
+			</table>
+			</center>
+			</form>
+			</fieldset>
+			</BODY>
+			</HTML>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>User Register form</title>
+<style type="text/css">
+    body {
+        background:url("photos/login/graybk.jpg");
+        margin: 10px;
+        outline: groove black 500px;}
+    #wrapper {
+        width:650px;
+        margin:0 auto;
+        font-family:Verdana, sans-serif;
+    }
+    legend {
+        color:#0481b1;
+        font-size:16px;
+        padding:0 10px;
+        background:#fff;
+        -moz-border-radius:4px;
+        box-shadow: 0 1px 5px rgba(4, 129, 177, 0.5);
+        padding:5px 10px;
+        text-transform:uppercase;
+        font-family:Helvetica, sans-serif;
+        font-weight:bold;
+    }
+    fieldset {
+        border-radius:4px;
+        background: #fff; 
+        background: -moz-linear-gradient(#fff, #f9fdff);
+        background: -o-linear-gradient(#fff, #f9fdff);
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#f9fdff)); /
+        background: -webkit-linear-gradient(#fff, #f9fdff);
+        padding:25px 50px;;
+        border-color:rgba(4, 129, 177, 0.4);
+    }
+    input,
+    textarea {
+        font-family:"Cantarell";
+        font-weight:600;
+        color: black;
+        background: #fff;
+        border: 1px solid #CCCCCC;
+        color:black;
+        font-size: 16px;
+        line-height: 1.2em;
+        margin-bottom:15px;
+   text-transform:capitalize;
+        -moz-border-radius:4px;
+        -webkit-border-radius:4px;
+        border-top-color: pink;
+        border-radius:9px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset, 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
+    input[type="text"],
+    input[type="password"]{
+        padding: 8px 6px;  
+        height: 22px;
+        width:280px;
+    }
+    /*for email*/
+     input[type="email"]{
+        padding: 8px 6px;
+        height: 22px;
+        width:280px;}
+        
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+        background:#f5fcfe;
+           text-indent: 0;
+        z-index: 1;
+        color: rgb(0,0,250);
+        -webkit-transition-duration: 400ms;
+        -webkit-transition-property: width, background;
+        -webkit-transition-timing-function: ease;
+        -moz-transition-duration: 400ms;
+        -moz-transition-property: width, background;
+        -moz-transition-timing-function: ease;
+        -o-transition-duration: 400ms;
+        -o-transition-property: width, background;
+        -o-transition-timing-function: ease;
+        width: 380px;
+        font-size:15px;font-weight: 600;
+        border-color:#ccc;
+        box-shadow:0 0 5px rgba(4, 129, 177, 0.5);
+        opacity:0.6;
+    }
+    /*for email*/
+     input[type="email"]:focus
+     {
+        background:#f5fcfe;
+        text-indent: 0;
+        z-index: 1;
+        color: rgb(0,0,250);
+        -webkit-transition-duration: 400ms;
+        -webkit-transition-property: width, background;
+        -webkit-transition-timing-function: ease;
+        -moz-transition-duration: 400ms;
+        -moz-transition-property: width, background;
+        -moz-transition-timing-function: ease;
+        -o-transition-duration: 400ms;
+        -o-transition-property: width, background;
+        -o-transition-timing-function: ease;
+        width: 380px;
+        font-size:15px;font-weight: 600;
+        border-color:#ccc;
+        box-shadow:0 0 5px rgba(4, 129, 177, 0.5);
+        opacity:0.6;
+    }
+   
+    
+input[type="reset"]{
+        background: #222;
+        border: none;
+        text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
+        text-transform:uppercase;
+        color:#eee;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight:600;
+        margin: 5px 0;
+        padding: 5px 22px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        -webkit-border-radius:4px;
+        -webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+        -moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+        box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+    }
+    textarea {
+        padding:3px;
+        width:96%;
+        height:100px;
+        color:black;
+   text-transform:uppercase;
+    }
+    textarea:focus {
+        background:#ebf8fd;
+        text-indent: 0;
+        z-index: 1;
+        color: blue;
+        opacity:0.6;
+        box-shadow:0 0 5px rgba(4, 129, 177, 0.5);
+        border-color:#ccc;
+        font-size: 16px;font-weight: 700;
+    }
+    .small {
+        line-height:14px;
+        font-size:12px;
+        color:#999898;
+        margin-bottom:3px;
+    }
+    input[type="submit"]
+    {
+    background: #4b8df9; display:inline-block; padding: 5px 10px 6px; color: #fbf7f7;
+    text-decoration: none; font-weight: bold; line-height: 1;
+    -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -moz-box-shadow: 0 1px 3px #999;
+    -webkit-box-shadow: 0 1px 3px #999; box-shadow: 0 1px 3px #999; text-shadow: 0 -1px 1px #222;
+    border: none; position: relative; cursor: pointer; font-size: 14px; font-family:Verdana, Geneva, sans-serif;
+    }
+    .form input.sub:hover{ background-color: #2a78f6; }
+    <!--back to home-->
+    
+
+.first{
+        color: red;
+	line-height: 24px;
+	font-size: 11px;
+	background: rgba(0, 0, 0, 0.05);
+	text-transform: uppercase;
+	z-index: 9999;
+	position: relative;
+	box-shadow: 1px 0px 2px rgba(0,0,0,0.2);
+}
+.first a{
+	padding: 0px 10px;
+	letter-spacing: 1px;
+	color:green;
+	text-shadow: 0px 1px 1px #fff;
+	display: block;
+	float: left;
+}
+.first a:hover{
+	background: #fff;
+}
+.first span.right{
+	float: right;
+}
+.first span.right a{
+	float: left;
+	display: block;
+}
+</style>
+<script>
+function fname_check()
+{
+			
+var alphaExp = /^[a-z A-Z]+$/;
+if(fname.value.match(alphaExp))
+{
+return true;
+    }
+else
+     {
+    alert("Enter Valid First Name");
+    document.form1.fname.value="";
+    document.form1.fname.focus();
+			
+    }
+    }
+    function lname_check()
+    {
+    var z=document.form1.lname.value;
+    var alphaExp = /^[a-z A-Z]+$/;
+    if(lname.value.match(alphaExp))
+    {
+    return true;
+    }
+else
+    {
+    alert("Enter Valid Last Name");
+    document.form1.lname.value="";
+    document.form1.lname.focus();
+			
+    }
+}
+function color_check()
+{
+var alphaExp = /^[a-z A-Z]+$/;
+if(color1.value.match(alphaExp))
+{
+return true;
+    }
+else
+     {
+    alert("Enter Valid color Name");
+    document.form1.color1.value="";
+    document.form1.color1.focus();
+			
+    }
+}
+function city_check()
+    {
+	var z=document.form1.city.value;
+	var alphaExp = /^[a-z A-Z]+$/;
+    if(city.value.match(alphaExp))
+    {
+    return true;
+    }
+else
+        {
+    alert("Enter Valid City");
+    document.form1.city.focus();
+    document.form1.city.value="";
+    return false;
+	}
+
+    }
+    function mobile()
+    {
+var z=document.form1.mobno.value;
+if(z.length!=10)
+	{
+	alert("Enter Valid Mobile Number");
+	document.form1.mobno.value="";
+	document.form1.mobno.focus();
+
+	}
+
+	if (z.charAt(i) < "0" || z.charAt(i) > "9") 
+	{
+	alert("Mobile Number must only contain numbers");
+	document.form1.mobno.value="";
+	document.form1.mobno.focus();
+	}
+	}
+function house_check()
+    {
+var z=document.form1.hno.value;
+if(z.length<6)
+{
+alert("Enter Valid house Number");
+document.form1.hno.value="";
+document.form1.hno.focus();
+}
+}
+function state_check()
+    {
+var z=document.form1.state.value;
+var alphaExp = /^[a-z A-Z]+$/;
+	if(state.value.match(alphaExp))
+        {
+		return true;
+	}
+else
+        {
+		alert("Enter Valid State name!!");
+		document.form1.state.value="";
+		document.form1.state.focus();
+		return false;
+	}
+
+    }
+ function checkPass()
+    {
+        
+        var pass1 = document.getElementById('pass1');
+        var pass2 = document.getElementById('pass2');
+        //Store the Confimation Message Object ...
+        var message = document.getElementById('confirmMessage');
+        
+        var goodColor = "#66cc66";
+        var badColor = "#ff6666";
+    
+        if(pass1.value == pass2.value){                pass2.style.backgroundColor = goodColor;
+            message.style.color = goodColor;
+            message.innerHTML = "Passwords Match!";
+       form1.action="http://localhost/voters/php/user_signup.php";
+		 form1.method="POST";
+form1.submit();
+
+        }else{
+            //The passwords do not match.
+            //Set the color to the bad color and
+            //notify the user.
+            pass2.style.backgroundColor = badColor;
+            message.style.color = badColor;
+            message.innerHTML = "Passwords Do Not Match!";
+                    form1.action="http://localhost/voters/user_signup.html";
+		 form1.method="POST";
+form1.submit();
+        }
+    }
+    
+</script>
+</head>
+<body>
+<div class="first">
+<a href="user_login.html" target=""><img src="photos/login/loginid.png" alt="home"/><strong>Back to Login</a>
+ <span class="right">
+<a href="Homepage.html">
+<img src="photos/login/home.png" alt="home"/>Back to the Homepage</strong>
+  </a>
+</span>
+ </div>
+<div id="wrapper">
+<form method="post" action="http://localhost/voters/php/user_signup.php" name="form1" autocomplete="on">
+<br><br>         
+   <fieldset>
+            <legend>Register Form</legend><p>
+ <font color="red">All fields are compulsary:</font></p>            
+<div>
+            <input type="text" name="fname" placeholder="First Name" id="fname" onblur="fname_check()"  required/>
+            </div>
+                <div>
+                <input type="text" name="lname" placeholder="Last Name" id="lname" onblur="lname_check()" required/>
+                </div>
+      <div>
+                    <input type="radio" name="gender" value="Male" checked/>Male
+ <input type="radio" name="gender" value="Female" />Female
+ <input type="radio" name="gender" value="Other"/>Other
+                </div>
+                <div>
+                    <input type="text" name="state" placeholder="state" id="state" onblur=" state_check()" required/>
+                </div>
+<div>
+                    <input type="text" name="city" placeholder="City" id="city" onblur="city_check()"  required/>
+                </div>
+                <div>
+                    <input type="text" name="mobno" placeholder="Mobile No" id="mob_no" onblur="mobile()" required
+					 title="enter phone number as: (+91) 9762222448"
+           onhelp="alert('enter valid mobile number');return false"/>
+                </div>
+                <div>
+                    <input type="email" name="email" placeholder="Email" required
+					 title="enter email as: www.name@email.com"/>
+                
+                    <div>
+                   <input type="password" name="pwd" placeholder="Password" required
+				    title="enter your unique password" id="pass1" />
+                </div>
+                     <div>
+                   <input type="password" name="" placeholder="Re-enter your Password" id="pass2"
+                   onkeyup="checkPass()" onblur="checkPass()"/>&nbsp;<i id="confirmMessage"></i>
+                   
+                </div>
+                    <div>
+                   <input type="text" name="color" id="color1" placeholder="fev color" onblur="color_check()" required
+				    title="enter fev color"/>
+                </div>
+                    
+                    
+                    <div>
+                    <input type="text" name="houseno" placeholder="House No" id="hno" onblur="house_check()" 
+					 title="enter your home no"/>
+					  <span style="font-size:xx-small">
+        <a href="javascript:alert:('<center><i><u><b> Enter your house number or your home number ')">Need help?</a>
+    </span></label>
+                </div>
+    <div>
+                    <div class="small">*Please Enter Full Address:</div>
+                    <textarea name="address" placeholder="Address" required></textarea>
+    </div>    <script> function visit(){window.alert("Check all fields are fill up carefully");}</script>
+
+                <input type="submit" name="submit" value="Sign me up!" onblur="visit()" class=sub onclick="checkPass()"/>
+                   <input type="reset" name="reset" value="Reset"/>
+            <b></fieldset>    
+        </form>
+    </div>
+ </div>
+    </body>
+</html>
